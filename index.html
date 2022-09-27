@@ -1,0 +1,131 @@
+<html>  
+<head>  
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>QR Code | Log in</title>
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript" src="js/instascan.min.js"></script>
+        <!-- DataTables -->
+        <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+        #divvideo{
+             box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        </style>
+    <title>PHP login system</title>  
+    
+    <link rel = "stylesheet" type = "text/css" href = "style1.css">   
+     <style>
+body {
+  background-image: url('img/k.jpg');
+   background-repeat: no-repeat;
+    background-size: 100%;
+  background-attachment: fixed;
+
+
+}
+
+  input[type="text"],input[type="password"]{
+    margin-top: 28px;
+    //height: 28px;
+   // width: 200px;
+   // margin-bottom: 18px;
+    //background-color: #geget;
+    padding-left: 40px;
+       border: none;
+       border-radius: 8px;
+
+}
+//.container img{
+    width: 100px;
+    height: 100px;
+    margin-top: -60px;
+    border-radius: 8px;
+}
+
+.form-input::before{
+    content: "\f007";
+    font-family: "FontAwesome";
+    padding-left: 07px;
+    padding-top: 28px;
+    position: absolute;
+    font-size: 40px;
+   // color: #2980b9; 
+    border-radius:8px;
+  
+}
+.row {
+    background-color:lightblue;
+border-radius: 30px;
+font-size: 30px;
+opacity:20;
+}
+
+//.btn-login{
+    padding: 10px 20px;
+    border: none;
+    background-color: #27ae60;
+    color: #eeefffg;
+}
+//form {
+  border-radius: 8px;
+      font-size: 20px;
+   font-family: Arial Narrow; 
+    padding: 10px 20px;
+}
+
+</style> 
+</head>  
+<body> 
+         </nav>
+       <div class="container">
+ <div class="row">
+        <div align="center"><div class="col-md-12"> 
+    <div align="center" ><div id = "fm" >  
+              <img src="img\7.png"  width =" 9%"  >
+        <h2 style="color:yellow">Login</h2>  
+        <form name="form-input" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label style="color:white"><span class="glyphicon glyphicon-user"></span> User Name: </label>  
+                <input type ="text" id ="user" name = "user" placeholder=" Enter UserName " />  
+            </p>  
+            <p>  
+                <label style="color:white"> <span class="glyphicon glyphicon-lock"></span> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" placeholder=" Enter Password  "/>  
+           </p>  
+            <p>     
+                <input type =  "submit" id = "btn-login" value = "Login" />  
+            </p>  
+        </form>  
+    </div>  
+</div>
+
+     
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html> 
